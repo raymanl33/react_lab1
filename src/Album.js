@@ -6,12 +6,12 @@ export default function Album(props) {
 
     console.log(tracks);
     return (
-      <>
+      <div>
       <p>Album Name: {name}</p>
       <img src={coverImg}></img>
         <ol className="tracks">
             {tracks.map(track => (<li>{track} ▶️</li>))}
         </ol>
-      </>
+      </div>
   
     )}
