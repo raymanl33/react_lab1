@@ -1,10 +1,23 @@
+* {
+  background-color: black;
+  color: aliceblue;
+}
 
 .App {
   font-family: sans-serif;
   text-align: center;
+  
 }
 
-.tracks {
+.grid-album {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  justify-items: stretch;
+}
+
+.grid-albumList {
+  display: grid;
 
 }
 
