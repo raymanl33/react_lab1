@@ -11,6 +11,6 @@ export default function App() {
       coverImg={album.coverImg}
       tracks={album.tracks}
       /> )
-    
+
   );
 }
