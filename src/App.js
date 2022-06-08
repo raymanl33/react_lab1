@@ -6,9 +6,9 @@ import AlbumLists from "./AlbumLists";
 import { useState } from "react";
 
 export default function App() {
-  // hardcoded ... make it dynamic
-  
 
+  // use state to allow the user to click an album image from the Albumlist component
+  // and allow it to display the selected album at the top 
   const [shownIndex, setShownIndex] = useState(0);
   const selectedAlbum = AlbumDatabase.filter(album => album['id'] === shownIndex)
   
