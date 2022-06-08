@@ -3,9 +3,14 @@ import Album from "./Album";
 import AlbumDatabase from "./data";
 import AlbumLists from "./AlbumLists";
 
+import { useState } from "react";
+
 export default function App() {
   // hardcoded ... make it dynamic
-  const selectedAlbum = AlbumDatabase.filter(album => album['id'] === 3)
+  
+
+  const [shownIndex, setShownIndex] = useState(0);
+  const selectedAlbum = AlbumDatabase.filter(album => album['id'] === shownIndex)
   
   return (
     <div>
@@ -19,6 +24,8 @@ export default function App() {
       <h1>Select an Album</h1>
        {AlbumDatabase.map(album => 
       <AlbumLists
+          onShow={() => setShownIndex(album.id)}
+          isShown={shownIndex === 0}
           id={album.id} 
           name={album.name} 
           coverImg={album.coverImg}

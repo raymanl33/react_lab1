@@ -9,7 +9,7 @@ export default function Album(props) {
       <div className="grid-album">
       <img src={coverImg}></img>
         <ol className="tracks">
-            {tracks.map(track => (<li>{track} ▶️</li>))}
+            {tracks.map(track => (<button>{track} ▶️</button> ))}
         </ol>
       </div>
   
